@@ -1,0 +1,110 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #2c2c2c, #4b4b4b); /* Dark gray gradient background */
+}
+
+.container {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.greeting {
+    font-size: 3rem;
+    margin-bottom: 30px;
+}
+
+.time-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    background-color: #333; /* Dark gray color */
+    margin: 0 10px;
+    border-radius: 5px;
+    width: 250px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+}
+
+.colon {
+    font-size: 8rem;
+    line-height: 300px;
+    margin: 0 10px;
+    color: #fff;
+}
+
+.time {
+    font-size: 6rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.date {
+    margin-top: 30px;
+    font-size: 2rem;
+}
+
+.weather {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: #fff;
+    text-align: center;
+}
+
+.flip-box {
+    animation: flip 1s ease-in-out infinite;
+}
+
+.fullscreen-exit {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    cursor: pointer;
+    display: none;
+}
+
+@keyframes flip {
+    0% { transform: rotateX(0); }
+    50% { transform: rotateX(-90deg); }
+    100% { transform: rotateX(-180deg); }
+}
+
+@media screen and (max-width: 768px) {
+    .time {
+        font-size: 4rem;
+    }
+
+    .greeting, .date {
+        font-size: 1.5rem;
+    }
+
+    .box {
+        width: 180px;
+        height: 220px;
+    }
+
+    .colon {
+        font-size: 6rem;
+        line-height: 220px;
+    }
+}
